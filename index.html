@@ -189,7 +189,7 @@
                     faceapi.draw.drawFaceExpressions(canvas, resizedResult, minConfidence)
 
 
-                    if (result.expressions.disgusted > 0.5 && !disgusted) {
+                    if (result.expressions.disgusted > 0.6 && !disgusted) {
                         disgusted = true;
 
                         postSize(1);
