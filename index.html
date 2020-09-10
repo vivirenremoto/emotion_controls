@@ -32,6 +32,12 @@
             padding-left: 0;
             margin-top: 0;
         }
+
+        video,
+        canvas {
+            max-width: 320px;
+            max-height: 240px;
+        }
     </style>
 
     <div class="center-content page-container">
@@ -182,7 +188,7 @@
                     faceapi.draw.drawFaceExpressions(canvas, resizedResult, minConfidence)
 
 
-                    if (result.expressions.disgusted > 0.35 && !disgusted) {
+                    if (result.expressions.disgusted > 0.5 && !disgusted) {
                         disgusted = true;
 
                         postSize(1);
