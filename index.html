@@ -55,10 +55,10 @@
         </div>
 
         <div class="reaction" id="happy"
-            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/happy.png') center center;background-size:container;">
+            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/happy.png') no-repeat center center;background-size:container;">
             &nbsp;</div>
         <div class="reaction" id="disgusted"
-            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/disgusted.png') center center;background-size:container;">
+            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/disgusted.png') no-repeat center center;background-size:container;">
             &nbsp;</div>
 
 
@@ -206,7 +206,7 @@
                     if (result.expressions.neutral < 1) {
                         if (result.expressions.disgusted > 0.55) {
                             emotion = 'disgusted';
-                        } else if (result.expressions.happy > 0.8) {
+                        } else if (result.expressions.happy > 0.95) {
                             emotion = 'happy';
                         }
                     }
