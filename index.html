@@ -35,9 +35,12 @@
         }
 
         video,
-        canvas {
+        canvas,
+        .reaction {
             max-width: 320px;
             max-height: 240px;
+            width: 320px;
+            height: 240px;
         }
     </style>
 
@@ -46,10 +49,18 @@
         <div class="progress" id="loader">
             <div class="indeterminate"></div>
         </div>
-        <div style="position: relative" class="margin">
+        <div style="position: relative" class="margin" id="webcam">
             <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
             <canvas id="overlay" />
         </div>
+
+        <div class="happy"
+            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/happy.png') center center;background-size:container;">
+            &nbsp;</div>
+        <div class="disgusted"
+            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/disgusted.png') center center;background-size:container;">
+            &nbsp;</div>
+
 
 
         <div style="display:none">
@@ -190,7 +201,7 @@
 
                     var emotion = false;
 
-                    console.log(result.expressions.happy);
+
 
                     if (result.expressions.neutral < 1) {
                         if (result.expressions.disgusted > 0.55) {
@@ -203,11 +214,21 @@
                     if (emotion && !sent_emotion) {
                         sent_emotion = true;
 
+
+                        document.getElementById('webcam').style.display = 'none';
+                        document.getElementById('happy').style.display = 'none';
+                        document.getElementById('disgusted').style.display = 'none';
+                        document.getElementById(emotion).style.display = '';
+
                         postSize(emotion);
 
 
                         setTimeout(function () {
                             sent_emotion = false;
+
+                            document.getElementById('webcam').style.display = '';
+                            document.getElementById('happy').style.display = 'none';
+                            document.getElementById('disgusted').style.display = 'none';
                         }, 3000);
 
 
