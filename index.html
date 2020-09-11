@@ -139,15 +139,15 @@
         <script>
             let forwardTimes = []
             let withBoxes = true
-            var disgusted = false;
+            var sent_emotion = false;
 
 
 
-            function postSize(height) {
+            function postSize(emotion) {
                 var target = parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined);
 
                 if (typeof target != "undefined" && document.body.scrollHeight) {
-                    target.postMessage(height, "*");
+                    target.postMessage(emotion, "*");
                 }
             }
 
@@ -188,15 +188,22 @@
                     }
                     faceapi.draw.drawFaceExpressions(canvas, resizedResult, minConfidence)
 
+                    var emotion = false;
 
-                    if (result.expressions.disgusted > 0.6 && !disgusted) {
-                        disgusted = true;
+                    if (result.expressions.disgusted > 0.6) {
+                        emotion = 'disgusted';
+                    } else if (result.expressions.happy > 0.6) {
+                        emotion = 'happy';
+                    }
 
-                        postSize(1);
+                    if (emotion && !sent_emotion) {
+                        sent_emotion = true;
+
+                        postSize(emotion);
 
 
                         setTimeout(function () {
-                            disgusted = false;
+                            sent_emotion = false;
                         }, 3000);
 
 
