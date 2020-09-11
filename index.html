@@ -57,8 +57,8 @@
         <div class="reaction" id="happy"
             style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/happy.png') no-repeat center center;background-size:container;">
             &nbsp;</div>
-        <div class="reaction" id="disgusted"
-            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/disgusted.png') no-repeat center center;background-size:container;">
+        <div class="reaction" id="sad"
+            style="display:none;background:#fff url('https://vivirenremoto.github.io/eastwood_gmail/sad.png') no-repeat center center;background-size:container;">
             &nbsp;</div>
 
 
@@ -204,8 +204,8 @@
 
 
                     if (result.expressions.neutral < 1) {
-                        if (result.expressions.disgusted > 0.55) {
-                            emotion = 'disgusted';
+                        if (result.expressions.sad > 0.95) {
+                            emotion = 'sad';
                         } else if (result.expressions.happy > 0.95) {
                             emotion = 'happy';
                         }
@@ -217,7 +217,7 @@
 
                         document.getElementById('webcam').style.display = 'none';
                         document.getElementById('happy').style.display = 'none';
-                        document.getElementById('disgusted').style.display = 'none';
+                        document.getElementById('sad').style.display = 'none';
                         document.getElementById(emotion).style.display = '';
 
                         postSize(emotion);
@@ -228,7 +228,7 @@
 
                             document.getElementById('webcam').style.display = '';
                             document.getElementById('happy').style.display = 'none';
-                            document.getElementById('disgusted').style.display = 'none';
+                            document.getElementById('sad').style.display = 'none';
                         }, 3000);
 
 
