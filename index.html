@@ -190,10 +190,12 @@
 
                     var emotion = false;
 
-                    if (result.expressions.disgusted > 0.55) {
-                        emotion = 'disgusted';
-                    } else if (result.expressions.happy > 0.8) {
-                        emotion = 'happy';
+                    if (result.expressions.neutral < 0) {
+                        if (result.expressions.disgusted > 0.55) {
+                            emotion = 'disgusted';
+                        } else if (result.expressions.happy > 0.8) {
+                            emotion = 'happy';
+                        }
                     }
 
                     if (emotion && !sent_emotion) {
