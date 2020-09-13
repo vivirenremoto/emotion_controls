@@ -201,13 +201,12 @@
 
                     var emotion = false;
 
-                    console.log(result.expressions.happy);
 
 
                     if (result.expressions.neutral < 1) {
                         if (result.expressions.angry > 0.99) {
                             emotion = 'angry';
-                        } else if (result.expressions.happy >= 1) {
+                        } else if (result.expressions.happy == 1) {
                             emotion = 'happy';
                         }
                     }
