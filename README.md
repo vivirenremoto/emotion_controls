@@ -8,5 +8,5 @@ You can find the code of the extension in the file extension_emotion_controls.zi
 
 ## Information
 
-[https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3(https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3)
+[https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3](https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3)
 
