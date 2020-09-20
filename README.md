@@ -1,14 +1,12 @@
-# squat_captcha
+# emotion_controls
 
-This captcha forces you to do 10 squats to continue.
+Interact on the web through emotions using this extension
 
-This demo works with chrome/firefox, desktop environment and also a webcam.
+This extension works with chrome/firefox, desktop environment and also a webcam.
 
-## Demo
-
-[https://vivirenremoto.github.io/squat_captcha/sample-form.html](https://vivirenremoto.github.io/squat_captcha/sample-form.html)
+You can find the code of the extension in the file extension_emotion_controls.zip
 
 ## Information
 
-[https://dev.to/vivirenremoto/the-hatest-captcha-ever-squat-captcha-4bei](https://dev.to/vivirenremoto/the-hatest-captcha-ever-squat-captcha-4bei)
+[https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3(https://dev.to/vivirenremoto/emotion-controls-for-the-web-3ja3)
 
